@@ -13,7 +13,7 @@ Place `create-vite-project.bat` in your course root folder, where your exercise 
 fullstack-course/ # Your root folder
 ├── part1/
 ├── part2/
-└── create-vite-project.bat --> # Put it here!!
+└── create-vite-project.bat ---> # Put it here!!!!
 ```
 
 ## Creating a Project
@@ -28,7 +28,7 @@ fullstack-course/ # Your root folder
 
 The script will:
 - Create the 'part' folder if it doesn't exist yet.
-- Create a README.md file for the part if it doesn't exist yet.
+- Create a basic README.md file for the part if it doesn't exist yet.
 - Create a clean Vite+React project
 - Remove template bloat (default CSS, assets, etc.)
 - Set up minimal App.jsx and main.jsx
@@ -51,7 +51,7 @@ Each project gets a `runweb.bat` that:
 
 ## Why?
 
-Coming from C#, I wanted a faster way to set up clean projects for exercises. This eliminates repetitive setup and keeps everything organized following the course structure.
+I just wanted a faster way to set up clean projects for exercises. This eliminates repetitive setup and keeps everything organized following the course structure.
 
 ## License
 
