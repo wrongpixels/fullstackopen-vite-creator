@@ -1,69 +1,95 @@
 # Vite Project Creator for Full Stack Open
 
-A script I made while doing the [Full Stack Open course](https://fullstackopen.com/) to set up clean Vite+React projects + JSON servers for exercises.
+A simple script to automatically set up clean Vite+React projects + JSON servers for [Full Stack Open course](https://fullstackopen.com/) exercises.  
+It also places executable `.bat` files inside them to instantly run the project and/or the server.
 
-**One-click setup for:**  
-✅ Clean Vite+React projects  
-✅ JSON server backend API  
-✅ An organized exercise structure
+---
 
 ## Setup
 
 Place `create-project.bat` in your course root folder, where your exercise parts are (or will be) located:
 
-```plaintext
-fullstack-course/ # Your root folder
+fullstack-course/  # Your root folder
 ├── part1/
 ├── part2/
-└── create-project.bat --> # Put it here!!
-```
+└── create-project.bat  <-- Put it here!
 
-##  Creating a Project
+---
+
+## Creating a Project
 
 1. Double-click `create-project.bat`
-2. Enter part number (e.g., `3` for part3)
-3. Enter project name (e.g., `phonebook`)
-4. Choose if you need JSON Server features (Y/N)
+2. Enter the part number (e.g., `3` for part3)
+3. Enter the project name (e.g., `phonebook`)
+4. Choose if you need **JSON Server** features (Y/N)
+5. Choose if you want to remove the default `.css` files (Y/N)
 
-**And the script will:**
-- Create part folder + README if missing
-- Set up clean Vite+React project
-- Remove template bloat (CSS/assets)
+**After you confirm, the script will:**
+- Create the part folder + README if missing
+- Set up a clean Vite+React project
+- Remove default template assets (always)
+- Optionally remove default `.css` files
 - Install dependencies automatically
-- Add a JSON Server setup if requested:
-  - Installing axios package
-  - Creating an empty `db.json`
-  - Adding a `run-json-server.bat` starter
-- Remove default .css files in requested
+- (Optional) Add a JSON Server setup:
+  - Install the `axios` package
+  - Create an empty `db.json`
+  - Add a `run-json-server.bat` script
+
+---
 
 ## Starting Projects
 
-- **Frontend**: Double-click `runweb.bat` in project folder  
-  *(Kills existing dev servers and opens the new one in the browser)*
+- **Frontend**  
+  Double-click `runweb.bat` in the project folder  
+  (Kills existing Vite dev servers on ports 5173 / 5174, then opens the new one in the browser)
 
-- **JSON Server** (if added):  
-  Double-click `run-json-server.bat`  
-  *(Starts API server on port 3001, watching a dummy db.json by default)*
+- **JSON Server**  
+  If JSON Server features were enabled, double-click `run-json-server.bat`  
+  (Starts a mock API server on port 3001, watching `db.json`)
+
+---
+
+## Example Project Structure
+
+If you created a project called `phonebook` in part3, you might end up with a structure like this:
+
+fullstack-course/
+├── part2/
+├── part3/
+│   └── README.md
+│   └── phonebook/
+│       ├── (...)
+│       ├── db.json        (only if JSON Server was requested)
+│       ├── run-json-server.bat  (only if JSON Server was requested)
+│       └── runweb.bat
+└── create-project.bat
+
+---
 
 ## Requirements
 
-- Windows
-- Node.js + npm
-- Basic understanding of JSON Server (if used)
+- Windows (due to `.bat` scripts)
+- Node.js + npm installed and available in your PATH
+- Basic understanding of JSON Server (if you choose to enable it)
 
-## Why?
+---
 
-- ⚡ Skip repetitive setup
-- 🧩 Consistent exercise structure
-- 🚦 Self-contained project launchers
-- 🌐 Fullstack-ready in 2 clicks
+## Common Issues & Troubleshooting
+
+- **Node not recognized**: Make sure Node.js and npm are installed and properly configured in your system’s PATH.
+- **Ports in use**: The script attempts to kill existing processes on ports 5173 and 5174 (used by default by Vite). If you still have conflicts, close any existing Node processes manually or reboot.
+
+---
 
 ## Recent Changes
-- [NEW] Optional .css files deletion after install
+
+- [NEW] Optional `.css` files deletion after install
 - [NEW] Optional JSON Server integration
-- [NEW] Automatic axios installation
+- [NEW] Automatic `axios` installation
 - [NEW] Dual server support (Vite + JSON Server)
-- Improved error handling
+- Improved error handling and prompts
+
+---
 
 ## License
 
