@@ -52,8 +52,8 @@ call npm create vite@latest %project_name% -- --template react
 cd %project_name%
 call npm install
 
-:: JSON Server Setup
 echo.
+:: JSON Server Setup
 :json_server_prompt
 set /p json_server="    Add JSON Server features? (Y/N): "
 if /i "%json_server%"=="Y" (
@@ -69,12 +69,21 @@ if /i "%json_server%"=="Y" (
     goto :json_server_prompt
 )
 
-echo    [Cleaning] Removing unnecessary files...
-del /Q src\*.css
+echo.
+:: Prompt for removing .css files
+:remove_css_prompt
+set /p remove_css="    Get rid of default .css files? (Y/N): "
+if /i "%remove_css%"=="Y" (
+    echo    [Cleaning] Removing default .css files...
+    del /Q src\*.css
+)
+
+echo    [Cleaning] Removing default assets...
 del /Q src\assets\*.*
 rmdir /S /Q src\assets
 del /Q public\*.*
 
+echo.
 echo    [Setup] Creating minimal structure...
 echo import React from 'react' > src\main.jsx
 echo import ReactDOM from 'react-dom/client' >> src\main.jsx
