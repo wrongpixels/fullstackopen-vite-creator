@@ -1,13 +1,11 @@
 # Vite Project Creator for Full Stack Open
 
-A script I made while doing the [Full Stack Open course](https://fullstackopen.com/) to quickly set up clean Vite+React projects + JSON servers for exercises.
-
-Just run the script, type the 'part' number the exercise belongs to, give the project a name, choose if you want a JSON server… and that's all!
+A script I made while doing the [Full Stack Open course](https://fullstackopen.com/) to set up clean Vite+React projects + JSON servers for exercises.
 
 **One-click setup for:**  
 ✅ Clean Vite+React projects  
-✅ JSON server backend API
-✅ And organized exercise structure, following the course's parts
+✅ JSON server backend API  
+✅ An organized exercise structure
 
 ## Setup
 
@@ -27,7 +25,7 @@ fullstack-course/ # Your root folder
 3. Enter project name (e.g., `phonebook`)
 4. Choose if you need JSON Server features (Y/N)
 
-And the script will:
+**And the script will:**
 - Create part folder + README if missing
 - Set up clean Vite+React project
 - Remove template bloat (CSS/assets)
