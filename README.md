@@ -9,18 +9,18 @@ A script I made while doing the [Full Stack Open course](https://fullstackopen.c
 
 ## Setup
 
-Place `create-vite-project.bat` in your course root folder, where your exercise parts are (or will be) located:
+Place `create-project.bat` in your course root folder, where your exercise parts are (or will be) located:
 
 ```plaintext
 fullstack-course/ # Your root folder
 ├── part1/
 ├── part2/
-└── create-vite-project.bat --> # Put it here!!
+└── create-project.bat --> # Put it here!!
 ```
 
 ##  Creating a Project
 
-1. Double-click `create-vite-project.bat`
+1. Double-click `create-project.bat`
 2. Enter part number (e.g., `3` for part3)
 3. Enter project name (e.g., `phonebook`)
 4. Choose if you need JSON Server features (Y/N)
@@ -34,6 +34,7 @@ fullstack-course/ # Your root folder
   - Installing axios package
   - Creating an empty `db.json`
   - Adding a `run-json-server.bat` starter
+- Remove default .css files in requested
 
 ## Starting Projects
 
@@ -58,7 +59,7 @@ fullstack-course/ # Your root folder
 - 🌐 Fullstack-ready in 2 clicks
 
 ## Recent Changes
-
+- [NEW] Optional .css files deletion after install
 - [NEW] Optional JSON Server integration
 - [NEW] Automatic axios installation
 - [NEW] Dual server support (Vite + JSON Server)
