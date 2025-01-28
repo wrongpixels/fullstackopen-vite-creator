@@ -37,7 +37,6 @@ echo.
 cd "%folder_name%"
 
 :project_input
-
 set /p project_name="    Project name: "
 
 if exist "%project_name%" (
@@ -52,6 +51,23 @@ echo    ============================================
 call npm create vite@latest %project_name% -- --template react
 cd %project_name%
 call npm install
+
+:: JSON Server Setup
+echo.
+:json_server_prompt
+set /p json_server="    Add JSON Server features? (Y/N): "
+if /i "%json_server%"=="Y" (
+    echo    - Installing axios...
+    call npm install axios
+    echo    - Creating db.json...
+    echo {^} > db.json
+    echo    - Creating run-json-server.bat...
+    echo npx json-server --port 3001 --watch db.json > run-json-server.bat
+    set json_server_enabled=Y
+) else if /i not "%json_server%"=="N" (
+    echo    [ERROR!] Invalid input. Please enter Y/N
+    goto :json_server_prompt
+)
 
 echo    [Cleaning] Removing unnecessary files...
 del /Q src\*.css
@@ -116,7 +132,11 @@ echo    ================================
 echo.
 echo    To start the local server any time:
 echo    1. Navigate to %folder_name%\%project_name%
-echo    2. Double-click runweb.bat
+if "%json_server_enabled%"=="Y" (
+    echo    2. Double-click runweb.bat AND run-json-server.bat
+) else (
+    echo    2. Double-click runweb.bat
+)
 echo.
 echo    Would you like to start the development server now? (Y/N)
 set /p choice="    Your choice: "
@@ -124,6 +144,10 @@ set /p choice="    Your choice: "
 if /i "%choice%"=="Y" (
     cls
     echo    Starting development server...
+    if "%json_server_enabled%"=="Y" (
+        echo    Starting JSON Server...
+        start "" run-json-server.bat
+    )
     echo    ============================
     echo.
     start /B runweb.bat
