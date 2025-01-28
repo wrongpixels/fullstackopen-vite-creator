@@ -1,12 +1,9 @@
 # Vite Project Creator for Full Stack Open
 
-A script I made while doing the [Full Stack Open course](https://fullstackopen.com/) to quickly set up clean Vite+React projects + JSON servers for exercises.
-Just run the script, type the 'part' number the exercise belongs to, give the project a name, choose if you want a JSON server… and that's all! 
+A batch script I made while doing the [Full Stack Open course](https://fullstackopen.com/) to quickly set up clean Vite+React projects and exercises.
+Just run the script, type the 'part' the exercise belongs to, give the project a name… and that's it! 
 
-**One-click setup for:**  
-✅ Clean Vite+React projects  
-✅ JSON server backend API
-✅ And organized exercise structure, following the course's parts
+The script will take care of creating it at the right folder, installing it and (optionally!), running it for you.
 
 ## Setup
 
@@ -16,55 +13,46 @@ Place `create-vite-project.bat` in your course root folder, where your exercise 
 fullstack-course/ # Your root folder
 ├── part1/
 ├── part2/
-└── create-vite-project.bat --> # Put it here!!
+└── create-vite-project.bat ---> # Put it here!!!!
 ```
 
-##  Creating a Project
+## Creating a Project
 
-1. Double-click `create-vite-project.bat`
+1. Double click `create-vite-project.bat`
 2. Enter part number (e.g., `3` for part3)
-3. Enter project name (e.g., `phonebook`)
-4. Choose if you need JSON Server features (Y/N)
+   - Creates the part folder if it doesn't exist
+   - Adds a basic README for the part if it doesn't exist
+3. Enter project name (e.g., `phonebook` or `notes`)
+4. Wait for setup to complete
+5. Choose whether to run the project or not.
 
-And the script will:
-- Create part folder + README if missing
-- Set up clean Vite+React project
-- Remove template bloat (CSS/assets)
-- Install dependencies automatically
-- Add a JSON Server setup if requested:
-   - Installing axios package
-   - Creating an empty `db.json`
-   - Adding a `run-json-server.bat` starter
+The script will:
+- Create the 'part' folder if it doesn't exist yet.
+- Create a basic README.md file for the part if it doesn't exist yet.
+- Create a clean Vite+React project
+- Remove template bloat (default CSS, assets, etc.)
+- Set up minimal App.jsx and main.jsx
+- Create a quick-start script for each project (runweb.bat)
+- Automatically install required dependencies
+- Give you the option to run the project after install.
 
-## Starting Projects
+## Starting Your Project
 
-- **Frontend**: Double-click `runweb.bat` in project folder  
-  *(Kills existing dev servers and opens the new one in the browser)*
-
-- **JSON Server** (if added):  
-  Double-click `run-json-server.bat`  
-  *(Starts API server on port 3001, watching a dummy db.json by default)*
+Each project gets a `runweb.bat` that:
+- Kills any existing processes at the default npm port
+- Starts the development server
+- Opens your browser automatically
 
 ## Requirements
 
 - Windows
-- Node.js + npm
-- Basic understanding of JSON Server (if used)
+- Node.js and npm installed
+- Being tired of typing `npm create vite@latest` and `npm run dev`
 
 ## Why?
 
-- ⚡ Skip repetitive setup
-- 🧩 Consistent exercise structure
-- 🚦 Self-contained project launchers
-- 🌐 Fullstack-ready in 2 clicks
-
-## Recent Changes
-
-- [NEW] Optional JSON Server integration
-- [NEW] Automatic axios installation
-- [NEW] Dual server support (Vite + JSON Server)
-- Improved error handling
+I just wanted a faster way to set up clean projects for exercises. This eliminates repetitive setup and keeps everything organized following the course structure.
 
 ## License
 
-MIT - Do whatever you want with it!
+MIT - Use it, share it, modify it, blame it… don't care!
