@@ -67,14 +67,6 @@ fullstack-course/
 
 - **Node not recognized**: Make sure Node.js and npm are installed and properly configured in your system’s PATH.
 - **Ports in use**: The script attempts to kill existing processes on ports 5173 and 5174 (used by default by Vite). If you still have conflicts, close any existing Node processes manually or reboot.
-
-## Recent Changes
-
-- [NEW] Optional `.css` files deletion after install
-- [NEW] Optional JSON Server integration
-- [NEW] Automatic `axios` installation
-- [NEW] Dual server support (Vite + JSON Server)
-- Improved error handling and prompts
 ---
 ## License
 
