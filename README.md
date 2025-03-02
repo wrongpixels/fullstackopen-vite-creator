@@ -33,7 +33,7 @@ fullstack-course/  # Your root folder
  
 ## Example Project Structure
 
-If you created a project called `phonebook` in `part3`, you will end up with a structure like this:
+If you created a project called `phonebook` in `part3`, you will end up with a structure like this: 
 ```
 fullstack-course/
 ├── part2/
