@@ -5,7 +5,7 @@ It also places executable `.bat` files inside them to instantly run the project 
 
 ## Setup 
 
-Place `create-project.bat` in your course root folder, where your exercise parts are (or will be) located:
+Place `create-project.bat` in your course root folder, where your exercise parts are (or will be) located: 
 ```
 fullstack-course/  # Your root folder
 ├── part1/
