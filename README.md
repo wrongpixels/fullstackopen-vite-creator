@@ -3,7 +3,7 @@
 A simple script to automatically set up clean Vite+React projects and JSON servers for [Full Stack Open course](https://fullstackopen.com/) exercises.
 It also places executable `.bat` files inside them to instantly run the project and/or the server.
 
-## Setup 
+## Setup
 
 Place `create-project.bat` in your course root folder, where your exercise parts are (or will be) located:
 ```
